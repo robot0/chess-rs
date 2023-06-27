@@ -2,7 +2,7 @@ use chess::MoveGen;
 
 use crate::engine::board::Board;
 use crate::engine::chess_move::ChessMove;
-
+#[derive(Debug, Clone)]
 pub struct MoveGenerator {}
 
 impl MoveGenerator {

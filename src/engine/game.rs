@@ -1,8 +1,8 @@
 use crate::engine::board::Board;
 use crate::engine::chess_move::ChessMove;
-// use crate::engine::movegen::MoveGenerator;
 
 #[allow(dead_code)]
+#[derive(Clone)]
 pub struct Game {
     
     board: Board,

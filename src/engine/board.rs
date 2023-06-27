@@ -3,7 +3,7 @@ use chess::{Board as ChessBoard, Color, Piece, Square};
 use crate::engine::chess_move::ChessMove;
 use crate::engine::movegen::MoveGenerator;
 
-
+#[derive(Debug, Clone)]
 pub struct Board {
     board: ChessBoard,
     movegen: MoveGenerator,
