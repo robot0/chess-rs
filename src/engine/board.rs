@@ -3,6 +3,7 @@ use chess::{Board as ChessBoard, Color, Piece, Square};
 use crate::engine::chess_move::ChessMove;
 use crate::engine::movegen::MoveGenerator;
 
+
 pub struct Board {
     board: ChessBoard,
     movegen: MoveGenerator,
@@ -19,6 +20,11 @@ impl Board {
     // Get a reference to the inner ChessBoard instance
     pub fn board(&self) -> &ChessBoard {
         &self.board
+    }
+
+    // Generate all legal moves for the current board position
+    pub fn legal_moves(&self) -> Vec<ChessMove> {
+        self.movegen.generate_legal_moves(self)
     }
 
     pub fn make_move(&mut self, chess_move: ChessMove) -> Result<(), &'static str> {
